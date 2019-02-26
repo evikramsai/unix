@@ -1,0 +1,16 @@
+Enter first number:
+10
+Enter second number:
+12
+12 is greater
+-sh-3.2$ cat exam8.sh
+echo "Enter first number:"
+read a
+echo "Enter second number:"
+read b
+if [ $a -gt $b ]
+then
+        echo "$a is greater"
+else
+        echo "$b is greater"
+fi

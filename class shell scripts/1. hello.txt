@@ -1,0 +1,4 @@
+echo "Good Morning"
+echo "Please enter your name"
+read name
+echo " Good Morning $name"

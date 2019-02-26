@@ -1,0 +1,23 @@
+echo "Enter the name of a file"
+read fn
+if [ -f $fn ]
+then
+        echo "It is a regular file"
+        if test -r $fn
+        then
+                echo "$fn is readable"
+        else
+                echo "$fn is not readable"
+        fi
+        if test -w $fn
+        then
+                echo "$fn is writable"
+        else
+                echo "$fn is not writable"
+        fi
+elif [ -d "$fn" ]
+then
+        echo "$fn is a directory"
+else
+        echo "$fn is neither a file nor a directory"
+fi

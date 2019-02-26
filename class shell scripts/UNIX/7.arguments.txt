@@ -1,0 +1,6 @@
+echo Program: $0
+echo Number of arguments are $#
+echo arguments are $*
+
+echo First argument is  $1
+echo second argument is $2

@@ -1,0 +1,2 @@
+var=`pwd`
+echo "The PWD is "  $var
