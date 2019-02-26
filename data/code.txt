@@ -1,0 +1,25 @@
+echo "Entered user names are $1,$2,$3,$4"
+who| grep "$1"|if [ $? -eq 0 ]
+then
+        echo "Employee $1 logged in"
+else
+        echo "Employee $1 not logged in"
+fi
+who | grep "$2"|if [ $? -eq 0 ]
+then
+        echo "Employee $2 logged in"
+else
+        echo "Employee $2 not logged in"
+fi
+who| grep "$3"|if [ $? -eq 0 ]
+then
+        echo "Employee $3 logged in"
+else
+        echo "Employee $3 not logged in"
+fi
+who | grep "$4"|if [ $? -eq 0 ]
+then
+        echo "Employee $4 logged in"
+else
+        echo "Employee $4 not logged in"
+fi

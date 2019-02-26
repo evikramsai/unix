@@ -1,0 +1,30 @@
+UNIX Process examples:
+
+1. PS:
+       $ ps -u: gives details of all user processes along with the start time, end time, execution time.
+       $ ps -l: gives ALL details of all user processes
+       $ ps -f: gives complete process details: uid, pid etc
+       $ ps -e: gives system processes
+
+2. Kill: 
+      $ kill <pid>: will kill the process
+      $ kill -9 <pid>: sure kill irrespective of dependencies
+      $ kill 0: kill inactive background processes
+     eg: $ kill 415 will kill user process 415 (find out PID using ps)
+
+3. Nice: alters the priority of a command in CPU scheduling
+     $ nice ls : reduces the priority of ls command by 10
+     $ nice -n10 ls: increase the priority of ls by 10
+
+4. Wait:
+     $ wait <pid> : schedules the CPU to make the parent process wait for the completion or death of
+		child process. wait is used to handle deadlock conditions.
+    eg: $ wait 743 : wait for the termination of process 743.
+
+5. Cron:
+     $ crontab -l : lists all cron files for the user.
+     $ crontab -e : to edit a cron file.
+To create a cron file go to /etc/cron. hourly (or cron.monthly or cron.daily or cron.weekly etc)
+Copy a scriptfile (.sh)
+Give it execute permissions
+Add a new job using 'crontab -e'
